@@ -1,0 +1,349 @@
+/*
+1.每一个不同地方的css会空两行
+2.参考: https://www.antmoe.com/posts/a811d614/
+  https://butterfly.lete114.top/article/Butterfly-config.html
+
+*/
+
+/* 版权链接去掉下划线 */
+.layout_post .post-copyright .post-copyright-info a {
+    text-decoration: none;
+}
+
+
+/* 博主昵称颜色 --也就是首页侧边栏头像下面那个昵称*/
+.author-info__name {
+    color: #BA55D3;
+}
+/*引入矢量库*/
+@import "//at.alicdn.com/t/font_2759583_3hf7xtorlvv.css";
+@font-face {
+  font-family: "iconfont"; /* Project id 2759583 */
+  src: url('//at.alicdn.com/t/font_2759583_3hf7xtorlvv.woff2?t=1629771215663') format('woff2'),
+       url('//at.alicdn.com/t/font_2759583_3hf7xtorlvv.woff?t=1629771215663') format('woff'),
+       url('//at.alicdn.com/t/font_2759583_3hf7xtorlvv.ttf?t=1629771215663') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-lianjie:before {
+  content: "\e69b";
+  color: yellow
+}
+
+.icon-pengyouquan:before {
+  content: "\e65b";
+  color: #c3d686;
+}
+
+
+.icon-zhuye:before {
+  content: "\e612";
+  color: #fff;
+}
+
+.icon-guanyu:before {
+  color: #85c3de;
+  content: "\e607";
+}
+
+.icon-liuyan:before {
+  color: rgb(207, 200, 200);
+  content: "\e60a";
+}
+
+.icon-guidang:before {
+  color: #ffaf6e;
+  content: "\e6fb";
+}
+
+.icon-fenlei:before {
+  color: #ff8787;
+  content: "\e66d";
+}
+
+.icon-biaoqian:before {
+  color: #ffbdd8;
+  content: "\f24b";
+}
+
+
+
+
+
+/* 首页中间打字效果上方 */
+#page-header #site_title {
+    color: #80bdab;
+}
+
+.icon-guidang
+
+/* 隐藏回到顶部按钮，替换为up酱 */
+
+#upj {
+  transform: translate(-70px, -80px) !important;
+}
+
+/*新版3.0.0以上添加up酱置顶ico图标上移问题*/
+.fas.fa-arrow-up {
+  line-height: 2;
+}
+
+/* 小风车颜色*/
+#content-inner.layout h1::before {
+  color: #ef50a8 ;
+  margin-left: -1.55rem;
+  font-size: 1.3rem;
+  margin-top: -0.23rem;
+}
+#content-inner.layout h2::before {
+  color: #fb7061 ;
+  margin-left: -1.35rem;
+  font-size: 1.1rem;
+  margin-top: -0.12rem;
+}
+#content-inner.layout h3::before {
+  color: #ffbf00 ;
+  margin-left: -1.22rem;
+  font-size: 0.95rem;
+  margin-top: -0.09rem;
+}
+#content-inner.layout h4::before {
+  color: #a9e000 ;
+  margin-left: -1.05rem;
+  font-size: 0.8rem;
+  margin-top: -0.09rem;
+}
+#content-inner.layout h5::before {
+  color: #57c850 ;
+  margin-left: -0.9rem;
+  font-size: 0.7rem;
+  margin-top: 0.0rem;
+}
+#content-inner.layout h6::before {
+  color: #5ec1e0 ;
+  margin-left: -0.9rem;
+  font-size: 0.66rem;
+  margin-top: 0.0rem;
+}
+
+/* 小风车转起来*/
+/* 文章页H1-H6图标样式效果 */
+h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
+  -webkit-animation: ccc 1.6s linear infinite ;
+  animation: ccc 1.6s linear infinite ;
+}
+@-webkit-keyframes ccc {
+  0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg)
+  }
+  to {
+      -webkit-transform: rotate(-1turn);
+      transform: rotate(-1turn)
+  }
+}
+@keyframes ccc {
+  0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg)
+  }
+  to {
+      -webkit-transform: rotate(-1turn);
+      transform: rotate(-1turn)
+  }
+}
+/* 转动方向 */
+/* 以下代码中，-1turn 为逆时针转动，1turn 为顺时针转动，相同数字部分记得统一修改： */
+@-webkit-keyframes ccc {
+  0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg)
+  }
+  to {
+      -webkit-transform: rotate(-1turn);
+      transform: rotate(-1turn)
+  }
+}
+@keyframes ccc {
+  0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg)
+  }
+  to {
+      -webkit-transform: rotate(-1turn);
+      transform: rotate(-1turn)
+  }
+}
+/* 转速 */
+/* 想调整风车转动速度，修改以下内容里的时间，数字越小转动越快 */
+h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
+  -webkit-animation: ccc 1.6s linear infinite ;
+  animation: ccc 1.6s linear infinite ;
+}
+/*设置鼠标碰到标题时，小风车跟随标题变色，且像是被光标阻碍了，转速变慢。鼠标离开恢复转速。也可以设置为 none 鼠标碰到停止转动。 */
+#content-inner.layout h1:hover, #content-inner.layout h2:hover, #content-inner.layout h3:hover, #content-inner.layout h4:hover, #content-inner.layout h5:hover, #content-inner.layout h6:hover {
+  color: #49b1f5 ;
+}
+#content-inner.layout h1:hover::before, #content-inner.layout h2:hover::before, #content-inner.layout h3:hover::before, #content-inner.layout h4:hover::before, #content-inner.layout h5:hover::before, #content-inner.layout h6:hover::before {
+  color: #49b1f5 ;
+  -webkit-animation: ccc 3.2s linear infinite ;
+  animation: ccc 3.2s linear infinite ;
+}
+
+/* 页面设置icon转动速度调整 */
+#rightside_config i.fas.fa-cog.fa-spin {
+  animation: fa-spin 5s linear infinite ;
+}
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(73, 177, 245, 0.2);
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #49b1f5;
+  background-image: -webkit-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.4) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0.4) 75%,
+    transparent 75%,
+    transparent
+  );
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-moz-selection {
+  color: #fff;
+  background-color: #49b1f5;
+}
+
+#footer-wrap  {
+  color: #0e0d0d;
+}
+
+/*页脚a标签字体颜色*/
+#footer-wrap a {
+  color: #e58a8a;
+}
+
+/*页脚自定义字段字体颜色*/
+/* 也就是配置文件里的footer_custom_text */
+.footer_custom_text {
+  color: #00c4b6;
+}
+
+/* a标签默认颜色 */
+#article-container a {
+    color: #00c4b6;
+    text-decoration: none;
+}
+
+/*鼠标样式*/
+body {
+  cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur),
+      default;
+}
+
+/*鼠标悬停*/
+a,
+img {
+    cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur),
+        default;
+}
+/* 鼠标悬停时的颜色 */
+#article-container a:hover {
+    color: #e58a8a;
+}
+
+
+/*a标签颜色*/
+a {
+    color: #00c4b6;
+}
+
+/* 页脚透明 */
+#footer{
+  background: transparent!important;
+}
+/* 头图透明 */
+#page-header{
+  background: transparent!important;
+}
+
+/*top-img黑色透明玻璃效果移除，不建议加，除非你执着于完全一图流或者背景图对比色明显 */
+#page-header.post-bg:before {
+  background-color: transparent!important;
+}
+/*夜间模式伪类遮罩层透明*/
+[data-theme="dark"]
+  #footer::before{
+      background: transparent!important;
+    }
+[data-theme="dark"]
+  #page-header::before{
+    background: transparent!important;
+    }
+
+
+
+/*--------------------下面是暂时用不到的css样式--------------------*/
+
+
+/* 自定义字体，暂时用不到先注释掉*/
+/* @font-face {
+    font-family: 'mycustom_font';
+    src: url('https://cdn.jsdelivr.net/gh/youthlql/static/font/chun_feng_kai.ttf');
+	font-size: 16px;
+} 
+
+
+//页脚自定义字段字体颜色,也就是配置文件里的footer_custom_text
+.footer_custom_text {
+  color: #EEEEEE;
+}
+ 页脚透明 
+#footer {
+  background: transparent !important;
+}
+
+ //顶部导航栏 
+#nav a {
+    color: #f9f2f4;
+}
+
+//鼠标样式
+body {
+  cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur),
+      default;
+}
+鼠标悬停
+a,
+img {
+    cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur),
+        default;
+}
+
+#web_bg {
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  }
+*/
